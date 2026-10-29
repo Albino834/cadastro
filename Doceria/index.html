@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro da Empresa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="cartao">
+        <h1>Cadastro da Empresa</h1>
+        <p class="subtitulo">Preencha os dados da empresa e do responsável.</p>
+
+        <form id="empresaForm" novalidate>
+            <label for="nomeEmpresa">Nome da empresa</label>
+            <input id="nomeEmpresa" name="nomeEmpresa" type="text" required>
+            <small id="erroNomeEmpresa"></small>
+
+            <label for="endereco">Endereço</label>
+            <input id="endereco" name="endereco" type="text" required>
+            <small id="erroEndereco"></small>
+
+            <label for="fone">Fone de contato</label>
+            <input id="fone" name="fone" type="tel" placeholder="(00) 00000-0000" maxlength="15" required>
+            <small id="erroFone"></small>
+
+            <label for="cnpj">CNPJ</label>
+            <input id="cnpj" name="cnpj" type="text" placeholder="00.000.000/0000-00" maxlength="18" inputmode="numeric" required>
+            <small id="erroCnpj"></small>
+
+            <label for="ie">Inscrição Estadual (IE)</label>
+            <input id="ie" name="ie" type="text">
+
+            <label for="responsavel">Nome da pessoa física responsável</label>
+            <input id="responsavel" name="responsavel" type="text" required>
+            <small id="erroResponsavel"></small>
+
+            <p id="mensagem" class="mensagem"></p>
+
+            <div class="botoes">
+                <button class="limpar" type="reset">Limpar</button>
+                <button class="salvar" type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
